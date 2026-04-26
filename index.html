@@ -287,21 +287,48 @@ html,body{
    BADGES  (bottom of left panel)
 ─────────────────────────────────────────── */
 .brand-badges{
-  width:100%;flex-shrink:0;z-index:2;
-  display:flex;flex-direction:column;
-  gap:5px;padding:6px 10px 8px;
+    width:100%;
+    flex-shrink:0;
+    z-index:2;
+
+    /* Change from column to row */
+    display:flex;
+    flex-direction:row;
+
+    justify-content:space-between;   /* spread equally */
+    align-items:center;
+    gap:5px;
+
+    padding:6px 10px 8px;
 }
+
 .badge{
-  display:flex;align-items:center;gap:9px;
-  background:rgba(255,255,255,0.13);
-  border:1px solid rgba(245,166,35,0.28);
-  border-left:3px solid var(--gold);
-  border-radius:5px;padding:5px 11px;
-  font-family:'Poppins',sans-serif;
-  font-size:clamp(9px,1.1vw,12px);
-  font-weight:500;color:var(--white);letter-spacing:0.4px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+
+    flex:1;   /* all 3 badges equal width */
+
+    background:rgba(255,255,255,0.13);
+    border:1px solid rgba(245,166,35,0.28);
+    border-left:3px solid var(--gold);
+    border-radius:5px;
+
+    padding:5px 8px;
+
+    font-family:'Poppins',sans-serif;
+    font-size:clamp(8px,1vw,11px);
+    font-weight:500;
+    color:var(--white);
+    letter-spacing:0.3px;
+
+    white-space:nowrap;
 }
-.badge-icon{font-size:13px;}
+
+.badge-icon{
+    font-size:13px;
+}
 
 /* live bar */
 .live-bar{
